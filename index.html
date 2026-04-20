@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Moto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> 
+        <h1> Fast Moto</h1>
+        <nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="logo/Logo (3).png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+    </a>
+  </div>
+  <button id="btn-show-login">login Admin</button>
+  <button id="btn-logout">cerrar sesion</button>
+
+</nav>
+    
+    </header>
+    <main>
+        <section id="login-section" class="hidden">
+        <div class="card">
+            <input type ="text" id="user-input" placeholder="usuario">
+            <input type="password" id="pass-input" placeholder="contraseña">
+            <button id="btn-login">ingresar</button>
+            <p id="login-error" class="error hidden" >contraseña incorrecta </p>
+
+        </div>
+        </section>
+
+        <section id="admin-section" class="hidden">
+            <div class="card">
+                <form id="product-form">
+                    <input type="hidden" id="edit-index">
+                    <input type="text" id="prod-img" placeholder="URL de la imagen(Ej: https://...)" required>
+                    <input type="text" id="prod-name" placeholder="nombre del producto" required> 
+                    <input type="number" id="prod-price" placeholder="precio" required>
+                    <textarea id="prod-desc" placeholder="descripcion breve"></textarea>
+                    <input type="text" id="aplicar-cupon" placeholder="cupon de descuento">
+                    <button id="btnsave">Guardar producto</button>
+
+                </form>
+            </div>
+        </section>
+
+
+
+        </section>
+
+    <section id="store-section">
+        <h3> Nuestros productos</h3>
+        <div id="products-grid" class="grid-container"></div>
+</section>
+    </main>
+    <script src="script.js"></script>
+
+    
+</body>
+</html>
